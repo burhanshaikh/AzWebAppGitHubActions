@@ -1,0 +1,1 @@
+This repository uses GitHub Actions to automate deployment on a Azure Web App
