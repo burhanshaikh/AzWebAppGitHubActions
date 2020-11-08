@@ -39,9 +39,6 @@ jobs:
         # Build and test the project, then
         # deploy to Azure Web App.
         npm install
-        sudo docker stop $(sudo docker ps -a -q)
-        sudo docker rm $(sudo docker ps -a -q)
-        sudo docker rmi $(sudo docker images -q)
         sudo docker build -t myimage .
         sudo docker run --name mycont -d -p 80:8080 myimage
     - name: 'Deploy to Azure WebApp'
